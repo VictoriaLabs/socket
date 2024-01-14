@@ -1,0 +1,9 @@
+version: '3.3'
+services:
+  bun:
+    build: .
+    ports:
+      - '8088:8088'
+    volumes:
+      - ./src:/usr/src/app
+    command: bash -c "bun install && bun run app.ts"
